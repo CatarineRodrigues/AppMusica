@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.com.zup.minhamusicafavorita.databinding.ActivityMainBinding
-import br.com.zup.minhamusicafavorita.ui.informacoes.view.DetalhesActivity
+import br.com.zup.minhamusicafavorita.ui.info.view.DetalhesActivity
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

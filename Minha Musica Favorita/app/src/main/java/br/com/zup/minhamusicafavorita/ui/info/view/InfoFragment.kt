@@ -1,4 +1,4 @@
-package br.com.zup.minhamusicafavorita.ui.informacoes.view
+package br.com.zup.minhamusicafavorita.ui.info.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.zup.minhamusicafavorita.databinding.FragmentInformacoesBinding
 
-class InformacoesFragment : Fragment() {
+class InfoFragment : Fragment() {
     private lateinit var binding: FragmentInformacoesBinding
 
     override fun onCreateView(

@@ -1,14 +1,14 @@
-package br.com.zup.minhamusicafavorita.ui.albuns
+package br.com.zup.minhamusicafavorita.ui.album
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.ActivityAlbunsBinding
-import br.com.zup.minhamusicafavorita.ui.albumSelecionado.view.AlbumSelecionadoFragment
+import br.com.zup.minhamusicafavorita.ui.albumDetails.view.AlbumDetailsFragment
 import br.com.zup.minhamusicafavorita.domain.model.Album
 
-class AlbunsActivity : AppCompatActivity() {
+class AlbumActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAlbunsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +39,7 @@ class AlbunsActivity : AppCompatActivity() {
     }
 
     private fun enviarDadosParaFragmento(album: Album) {
-        val fragmentoAlbumSelecionado = AlbumSelecionadoFragment().apply {
+        val fragmentoAlbumSelecionado = AlbumDetailsFragment().apply {
             arguments = Bundle().apply {
                 putParcelable("Album", album)
             }

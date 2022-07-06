@@ -1,4 +1,4 @@
-package br.com.zup.minhamusicafavorita.ui.albuns.view.adapter
+package br.com.zup.minhamusicafavorita.ui.album.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

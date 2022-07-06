@@ -1,4 +1,4 @@
-package br.com.zup.minhamusicafavorita.ui.albuns.view
+package br.com.zup.minhamusicafavorita.ui.album.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,11 +9,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import br.com.zup.minhamusicafavorita.*
 import br.com.zup.minhamusicafavorita.databinding.FragmentFotosBinding
-import br.com.zup.minhamusicafavorita.ui.albuns.view.adapter.AlbumAdapter
+import br.com.zup.minhamusicafavorita.ui.album.view.adapter.AlbumAdapter
 import br.com.zup.minhamusicafavorita.domain.model.Album
-import br.com.zup.minhamusicafavorita.ui.albuns.AlbunsActivity
+import br.com.zup.minhamusicafavorita.ui.album.AlbumActivity
 
-class AlbunsFragment : Fragment() {
+class AlbumFragment : Fragment() {
     private lateinit var binding: FragmentFotosBinding
     private val albumAdapter: AlbumAdapter by lazy {
         AlbumAdapter(arrayListOf(), ::irParaDetalheAlbum)
@@ -161,7 +161,7 @@ class AlbunsFragment : Fragment() {
     }
 
     private fun irParaDetalheAlbum(album: Album) {
-        val intent = Intent(context, AlbunsActivity::class.java).apply {
+        val intent = Intent(context, AlbumActivity::class.java).apply {
             putExtra(ALBUM_KEY, album)
         }
         startActivity(intent)

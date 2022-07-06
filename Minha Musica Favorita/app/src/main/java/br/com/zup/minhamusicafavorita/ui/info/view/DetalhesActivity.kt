@@ -1,16 +1,16 @@
-package br.com.zup.minhamusicafavorita.ui.informacoes.view
+package br.com.zup.minhamusicafavorita.ui.info.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.ActivityDetalhesBinding
-import br.com.zup.minhamusicafavorita.ui.home.view.adapter.DetalhesPagerAdapter
+import br.com.zup.minhamusicafavorita.ui.home.view.adapter.HomePagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 
 class DetalhesActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetalhesBinding
-    private val listaTopicos = listOf("Informações", "Fotos")
+    private val listaTopicos = listOf("Informações", "Álbuns")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,9 +21,9 @@ class DetalhesActivity : AppCompatActivity() {
     }
 
     private fun exibirViewPagerTabLayout() {
-        val detalhesPagerAdapter =
-            DetalhesPagerAdapter(supportFragmentManager, lifecycle, listaTopicos)
-        binding.vpDetalhe.adapter = detalhesPagerAdapter
+        val detailsPagerAdapter =
+            HomePagerAdapter(supportFragmentManager, lifecycle, listaTopicos)
+        binding.vpDetalhe.adapter = detailsPagerAdapter
         TabLayoutMediator(binding.tlDetalhe, binding.vpDetalhe) { tab, position ->
             tab.text = listaTopicos[position]
         }.attach()
