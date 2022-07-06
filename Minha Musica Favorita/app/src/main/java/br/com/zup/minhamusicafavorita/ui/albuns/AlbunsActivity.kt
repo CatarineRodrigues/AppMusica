@@ -1,12 +1,12 @@
-package br.com.zup.minhamusicafavorita.detalhes.albuns
+package br.com.zup.minhamusicafavorita.ui.albuns
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.ActivityAlbunsBinding
-import br.com.zup.minhamusicafavorita.detalhes.albuns.albumSelecionado.AlbumSelecionadoFragment
-import br.com.zup.minhamusicafavorita.model.Album
+import br.com.zup.minhamusicafavorita.ui.albumSelecionado.view.AlbumSelecionadoFragment
+import br.com.zup.minhamusicafavorita.domain.model.Album
 
 class AlbunsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAlbunsBinding

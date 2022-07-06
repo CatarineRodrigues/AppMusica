@@ -1,4 +1,4 @@
-package br.com.zup.minhamusicafavorita.model
+package br.com.zup.minhamusicafavorita.domain.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

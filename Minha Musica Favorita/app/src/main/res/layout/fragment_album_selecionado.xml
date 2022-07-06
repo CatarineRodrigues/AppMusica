@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".detalhes.albuns.albumSelecionado.AlbumSelecionadoFragment"
+    tools:context=".ui.albumSelecionado.view.AlbumSelecionadoFragment"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout

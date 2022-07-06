@@ -1,4 +1,4 @@
-package br.com.zup.minhamusicafavorita.detalhes.albuns.albumSelecionado
+package br.com.zup.minhamusicafavorita.ui.albumSelecionado.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import br.com.zup.minhamusicafavorita.*
 import br.com.zup.minhamusicafavorita.databinding.FragmentAlbumSelecionadoBinding
-import br.com.zup.minhamusicafavorita.model.Album
+import br.com.zup.minhamusicafavorita.domain.model.Album
 
 class AlbumSelecionadoFragment : Fragment() {
     private lateinit var binding: FragmentAlbumSelecionadoBinding

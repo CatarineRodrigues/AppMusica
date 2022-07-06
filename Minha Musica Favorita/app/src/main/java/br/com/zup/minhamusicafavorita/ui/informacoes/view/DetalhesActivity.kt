@@ -1,11 +1,11 @@
-package br.com.zup.minhamusicafavorita.detalhes
+package br.com.zup.minhamusicafavorita.ui.informacoes.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.ActivityDetalhesBinding
-import br.com.zup.minhamusicafavorita.main.adapter.DetalhesPagerAdapter
+import br.com.zup.minhamusicafavorita.ui.home.view.adapter.DetalhesPagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 
 class DetalhesActivity : AppCompatActivity() {
