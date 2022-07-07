@@ -12,6 +12,7 @@ import br.com.zup.minhamusicafavorita.*
 import br.com.zup.minhamusicafavorita.databinding.FragmentAlbumBinding
 import br.com.zup.minhamusicafavorita.ui.detail.album.view.adapter.AlbumAdapter
 import br.com.zup.minhamusicafavorita.domain.model.Album
+import br.com.zup.minhamusicafavorita.ui.detail.view.ViewPagerActivity
 
 class AlbumFragment : Fragment() {
     private lateinit var binding: FragmentAlbumBinding
@@ -29,6 +30,7 @@ class AlbumFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as ViewPagerActivity).supportActionBar?.title = getString(R.string.detalhe_da_banda)
         adicionarItensListaAlbum()
         exibirRecyclerView()
     }
@@ -163,11 +165,6 @@ class AlbumFragment : Fragment() {
     private fun irParaDetalheAlbum(album: Album) {
         val bundle = bundleOf(ALBUM_KEY to album)
         NavHostFragment.findNavController(this)
-            .navigate(R.id.action_albumFragment_to_albumDetailsFragment, bundle)
+            .navigate(R.id.action_viewPagerFragment_to_albumDetailsFragment, bundle)
     }
 }
-
-//        val intent = Intent(context, AlbumActivity::class.java).apply {
-//            putExtra()
-//        }
-//        startActivity(intent)

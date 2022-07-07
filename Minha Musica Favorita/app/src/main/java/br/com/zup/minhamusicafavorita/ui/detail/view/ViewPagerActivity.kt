@@ -10,23 +10,12 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 class ViewPagerActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetalhesBinding
-    private val listaTopicos = listOf("Informações", "Álbuns")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetalhesBinding.inflate(layoutInflater)
         setContentView(binding.root)
         acessarActionBar()
-        exibirViewPagerTabLayout()
-    }
-
-    private fun exibirViewPagerTabLayout() {
-        val homePagerAdapter =
-            HomePagerAdapter(supportFragmentManager, lifecycle, listaTopicos)
-        binding.vpDetalhe.adapter = homePagerAdapter
-        TabLayoutMediator(binding.tlDetalhe, binding.vpDetalhe) { tab, position ->
-            tab.text = listaTopicos[position]
-        }.attach()
     }
 
     private fun acessarActionBar() {

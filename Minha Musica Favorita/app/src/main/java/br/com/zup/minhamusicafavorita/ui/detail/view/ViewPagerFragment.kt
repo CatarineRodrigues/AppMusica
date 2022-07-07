@@ -6,14 +6,38 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.zup.minhamusicafavorita.R
+import br.com.zup.minhamusicafavorita.databinding.FragmentInfoBinding
+import br.com.zup.minhamusicafavorita.databinding.FragmentViewPagerBinding
+import br.com.zup.minhamusicafavorita.ui.home.view.adapter.HomePagerAdapter
+import com.google.android.material.tabs.TabLayoutMediator
 
 class ViewPagerFragment : Fragment() {
+
+    private lateinit var binding: FragmentViewPagerBinding
+    private val listaTopicos = listOf("Informações", "Álbuns")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_view_pager, container, false)
+        binding = FragmentViewPagerBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        (activity as ViewPagerActivity).supportActionBar?.title = getString(R.string.detalhe_da_banda)
+        exibirViewPagerTabLayout()
+    }
+
+    private fun exibirViewPagerTabLayout() {
+        val homePagerAdapter =
+            HomePagerAdapter((activity as ViewPagerActivity).supportFragmentManager,
+                lifecycle,
+                listaTopicos)
+        binding.vpDetalhe.adapter = homePagerAdapter
+        TabLayoutMediator(binding.tlDetalhe, binding.vpDetalhe) { tab, position ->
+            tab.text = listaTopicos[position]
+        }.attach()
     }
 }
