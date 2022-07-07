@@ -1,4 +1,4 @@
-package br.com.zup.minhamusicafavorita.ui.info.view
+package br.com.zup.minhamusicafavorita.ui.detail.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,7 +8,7 @@ import br.com.zup.minhamusicafavorita.databinding.ActivityDetalhesBinding
 import br.com.zup.minhamusicafavorita.ui.home.view.adapter.HomePagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 
-class DetalhesActivity : AppCompatActivity() {
+class ViewPagerActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetalhesBinding
     private val listaTopicos = listOf("Informações", "Álbuns")
 
@@ -21,9 +21,9 @@ class DetalhesActivity : AppCompatActivity() {
     }
 
     private fun exibirViewPagerTabLayout() {
-        val detailsPagerAdapter =
+        val homePagerAdapter =
             HomePagerAdapter(supportFragmentManager, lifecycle, listaTopicos)
-        binding.vpDetalhe.adapter = detailsPagerAdapter
+        binding.vpDetalhe.adapter = homePagerAdapter
         TabLayoutMediator(binding.tlDetalhe, binding.vpDetalhe) { tab, position ->
             tab.text = listaTopicos[position]
         }.attach()
@@ -36,7 +36,7 @@ class DetalhesActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) {
-            this.finish()
+            this.onBackPressed()
             return true
         }
         return super.onOptionsItemSelected(item)

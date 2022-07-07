@@ -1,29 +1,29 @@
-package br.com.zup.minhamusicafavorita.ui.album.view
+package br.com.zup.minhamusicafavorita.ui.detail.album.view
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.GridLayoutManager
 import br.com.zup.minhamusicafavorita.*
-import br.com.zup.minhamusicafavorita.databinding.FragmentFotosBinding
-import br.com.zup.minhamusicafavorita.ui.album.view.adapter.AlbumAdapter
+import br.com.zup.minhamusicafavorita.databinding.FragmentAlbumBinding
+import br.com.zup.minhamusicafavorita.ui.detail.album.view.adapter.AlbumAdapter
 import br.com.zup.minhamusicafavorita.domain.model.Album
-import br.com.zup.minhamusicafavorita.ui.album.AlbumActivity
 
 class AlbumFragment : Fragment() {
-    private lateinit var binding: FragmentFotosBinding
+    private lateinit var binding: FragmentAlbumBinding
     private val albumAdapter: AlbumAdapter by lazy {
         AlbumAdapter(arrayListOf(), ::irParaDetalheAlbum)
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
-        binding = FragmentFotosBinding.inflate(inflater, container, false)
+        binding = FragmentAlbumBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -161,9 +161,13 @@ class AlbumFragment : Fragment() {
     }
 
     private fun irParaDetalheAlbum(album: Album) {
-        val intent = Intent(context, AlbumActivity::class.java).apply {
-            putExtra(ALBUM_KEY, album)
-        }
-        startActivity(intent)
+        val bundle = bundleOf(ALBUM_KEY to album)
+        NavHostFragment.findNavController(this)
+            .navigate(R.id.action_albumFragment_to_albumDetailsFragment, bundle)
     }
 }
+
+//        val intent = Intent(context, AlbumActivity::class.java).apply {
+//            putExtra()
+//        }
+//        startActivity(intent)

@@ -4,8 +4,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import br.com.zup.minhamusicafavorita.ui.album.view.AlbumFragment
-import br.com.zup.minhamusicafavorita.ui.info.view.InfoFragment
+import br.com.zup.minhamusicafavorita.ui.detail.album.view.AlbumFragment
+import br.com.zup.minhamusicafavorita.ui.detail.info.view.InfoFragment
 
 class HomePagerAdapter(
     fragmentManager: FragmentManager,

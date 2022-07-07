@@ -7,22 +7,24 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import br.com.zup.minhamusicafavorita.*
-import br.com.zup.minhamusicafavorita.databinding.FragmentAlbumSelecionadoBinding
+import br.com.zup.minhamusicafavorita.databinding.FragmentAlbumDetailsBinding
 import br.com.zup.minhamusicafavorita.domain.model.Album
+import br.com.zup.minhamusicafavorita.ui.detail.view.ViewPagerActivity
 
 class AlbumDetailsFragment : Fragment() {
-    private lateinit var binding: FragmentAlbumSelecionadoBinding
+    private lateinit var binding: FragmentAlbumDetailsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentAlbumSelecionadoBinding.inflate(inflater, container, false)
+        binding = FragmentAlbumDetailsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as ViewPagerActivity).supportActionBar?.title = getString(R.string.detalhe_do_Album)
         recuperarAlbum()
         exibirMensagemFavoritar()
     }

@@ -26,4 +26,6 @@
     <string name="nome_taylor_swift">Taylor Swift</string>
     <string name="lista_albuns">Lista de álbuns</string>
     <string name="detalhe_do_Album">Detalhes do álbum</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

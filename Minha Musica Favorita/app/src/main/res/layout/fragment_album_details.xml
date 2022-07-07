@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.albumDetails.view.AlbumDetailsFragment"
-    >
+    tools:context=".ui.albumDetails.view.AlbumDetailsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -24,11 +23,12 @@
 
         <TextView
             android:id="@+id/tvNomeAlbum"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Album"
             android:textSize="@dimen/fonte_16"
             android:textStyle="bold"
+            android:gravity="center"
             android:layout_marginBottom="@dimen/margem_12"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +40,8 @@
             android:text="Detalhe Album"
             android:layout_margin="@dimen/margem_12"
             android:padding="@dimen/margem_12"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +50,7 @@
 
         <TextView
             android:id="@+id/tvCantora"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cantora"
             android:layout_marginTop="@dimen/margem_12"
@@ -60,7 +61,7 @@
 
         <TextView
             android:id="@+id/tvLancamento"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ano lançamento"
             android:layout_marginLeft="@dimen/margem_12"
@@ -70,7 +71,7 @@
 
         <TextView
             android:id="@+id/tvGravadora"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Gravadora"
             android:layout_marginLeft="@dimen/margem_12"
@@ -80,7 +81,7 @@
 
         <TextView
             android:id="@+id/tvEstudio"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Estudio"
             android:layout_marginLeft="@dimen/margem_12"
@@ -90,7 +91,7 @@
 
         <TextView
             android:id="@+id/tvFormato"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Formato"
             android:layout_marginLeft="@dimen/margem_12"
@@ -100,7 +101,7 @@
 
         <TextView
             android:id="@+id/tvGenero"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Genero"
             android:layout_marginLeft="@dimen/margem_12"
