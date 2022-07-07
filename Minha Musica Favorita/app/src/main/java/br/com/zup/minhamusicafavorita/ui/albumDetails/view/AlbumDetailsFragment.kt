@@ -9,7 +9,7 @@ import android.widget.Toast
 import br.com.zup.minhamusicafavorita.*
 import br.com.zup.minhamusicafavorita.databinding.FragmentAlbumDetailsBinding
 import br.com.zup.minhamusicafavorita.domain.model.Album
-import br.com.zup.minhamusicafavorita.ui.detail.view.ViewPagerActivity
+import br.com.zup.minhamusicafavorita.ui.viewpager.view.ViewPagerActivity
 
 class AlbumDetailsFragment : Fragment() {
     private lateinit var binding: FragmentAlbumDetailsBinding

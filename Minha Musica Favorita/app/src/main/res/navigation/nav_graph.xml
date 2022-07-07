@@ -6,7 +6,7 @@
     app:startDestination="@id/viewPagerFragment">
     <fragment
         android:id="@+id/viewPagerFragment"
-        android:name="br.com.zup.minhamusicafavorita.ui.detail.view.ViewPagerFragment"
+        android:name="br.com.zup.minhamusicafavorita.ui.viewpager.view.ViewPagerFragment"
         android:label="fragment_view_pager"
         tools:layout="@layout/fragment_view_pager" >
         <action

@@ -1,4 +1,4 @@
-package br.com.zup.minhamusicafavorita.ui.detail.view
+package br.com.zup.minhamusicafavorita.ui.viewpager.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,9 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.zup.minhamusicafavorita.R
-import br.com.zup.minhamusicafavorita.databinding.FragmentInfoBinding
 import br.com.zup.minhamusicafavorita.databinding.FragmentViewPagerBinding
-import br.com.zup.minhamusicafavorita.ui.home.view.adapter.HomePagerAdapter
+import br.com.zup.minhamusicafavorita.ui.viewpager.view.adapter.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 
 class ViewPagerFragment : Fragment() {
@@ -31,11 +30,11 @@ class ViewPagerFragment : Fragment() {
     }
 
     private fun exibirViewPagerTabLayout() {
-        val homePagerAdapter =
-            HomePagerAdapter((activity as ViewPagerActivity).supportFragmentManager,
+        val viewPagerAdapter =
+            ViewPagerAdapter((activity as ViewPagerActivity).supportFragmentManager,
                 lifecycle,
                 listaTopicos)
-        binding.vpDetalhe.adapter = homePagerAdapter
+        binding.vpDetalhe.adapter = viewPagerAdapter
         TabLayoutMediator(binding.tlDetalhe, binding.vpDetalhe) { tab, position ->
             tab.text = listaTopicos[position]
         }.attach()

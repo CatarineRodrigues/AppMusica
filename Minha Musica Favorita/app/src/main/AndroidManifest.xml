@@ -14,7 +14,7 @@
         android:theme="@style/Theme.MinhaMusicaFavorita"
         tools:targetApi="31" >
         <activity
-            android:name="br.com.zup.minhamusicafavorita.ui.detail.view.ViewPagerActivity"
+            android:name="br.com.zup.minhamusicafavorita.ui.viewpager.view.ViewPagerActivity"
             android:exported="false" />
         <activity
             android:name="br.com.zup.minhamusicafavorita.ui.home.view.HomeActivity"

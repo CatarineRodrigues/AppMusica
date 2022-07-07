@@ -1,4 +1,4 @@
-package br.com.zup.minhamusicafavorita.ui.detail.info.view
+package br.com.zup.minhamusicafavorita.ui.viewpager.info.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.FragmentInfoBinding
-import br.com.zup.minhamusicafavorita.ui.detail.view.ViewPagerActivity
+import br.com.zup.minhamusicafavorita.ui.viewpager.view.ViewPagerActivity
 
 class InfoFragment : Fragment() {
     private lateinit var binding: FragmentInfoBinding

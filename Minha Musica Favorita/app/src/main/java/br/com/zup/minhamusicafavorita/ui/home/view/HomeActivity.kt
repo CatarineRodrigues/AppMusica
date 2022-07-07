@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.com.zup.minhamusicafavorita.databinding.ActivityHomeBinding
-import br.com.zup.minhamusicafavorita.ui.detail.view.ViewPagerActivity
+import br.com.zup.minhamusicafavorita.ui.viewpager.view.ViewPagerActivity
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding

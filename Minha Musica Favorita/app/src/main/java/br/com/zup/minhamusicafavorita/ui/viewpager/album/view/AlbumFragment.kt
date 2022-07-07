@@ -1,4 +1,4 @@
-package br.com.zup.minhamusicafavorita.ui.detail.album.view
+package br.com.zup.minhamusicafavorita.ui.viewpager.album.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,9 +10,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.GridLayoutManager
 import br.com.zup.minhamusicafavorita.*
 import br.com.zup.minhamusicafavorita.databinding.FragmentAlbumBinding
-import br.com.zup.minhamusicafavorita.ui.detail.album.view.adapter.AlbumAdapter
+import br.com.zup.minhamusicafavorita.ui.viewpager.album.view.adapter.AlbumAdapter
 import br.com.zup.minhamusicafavorita.domain.model.Album
-import br.com.zup.minhamusicafavorita.ui.detail.view.ViewPagerActivity
+import br.com.zup.minhamusicafavorita.ui.viewpager.view.ViewPagerActivity
 
 class AlbumFragment : Fragment() {
     private lateinit var binding: FragmentAlbumBinding

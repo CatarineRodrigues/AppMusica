@@ -1,12 +1,10 @@
-package br.com.zup.minhamusicafavorita.ui.detail.view
+package br.com.zup.minhamusicafavorita.ui.viewpager.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import br.com.zup.minhamusicafavorita.R
 import br.com.zup.minhamusicafavorita.databinding.ActivityDetalhesBinding
-import br.com.zup.minhamusicafavorita.ui.home.view.adapter.HomePagerAdapter
-import com.google.android.material.tabs.TabLayoutMediator
 
 class ViewPagerActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetalhesBinding

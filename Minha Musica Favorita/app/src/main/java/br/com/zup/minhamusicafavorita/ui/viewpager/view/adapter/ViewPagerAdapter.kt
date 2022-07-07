@@ -1,13 +1,13 @@
-package br.com.zup.minhamusicafavorita.ui.home.view.adapter
+package br.com.zup.minhamusicafavorita.ui.viewpager.view.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import br.com.zup.minhamusicafavorita.ui.detail.album.view.AlbumFragment
-import br.com.zup.minhamusicafavorita.ui.detail.info.view.InfoFragment
+import br.com.zup.minhamusicafavorita.ui.viewpager.album.view.AlbumFragment
+import br.com.zup.minhamusicafavorita.ui.viewpager.info.view.InfoFragment
 
-class HomePagerAdapter(
+class ViewPagerAdapter(
     fragmentManager: FragmentManager,
     lifecycle: Lifecycle,
     private var listaTopicos: List<String>
