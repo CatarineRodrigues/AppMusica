@@ -1,8 +1,16 @@
-import br.com.zup.minhamusicafavorita.*
+import br.com.zup.minhamusicafavorita.data.datasource.local.dao.AlbumDAO
 import br.com.zup.minhamusicafavorita.domain.model.Album
 
-class AlbumRepository {
-    fun getListAlbum(): List<Album> {
+class AlbumRepository(private val albumDao: AlbumDAO) {
+
+    suspend fun getAllAlbums(): List<Album> = albumDao.getAllAlbums()
+
+    suspend fun insertAlbum(album: Album) {
+//        val listAlbums = createListAlbum()
+        albumDao.insertAlbum(album)
+    }
+
+   /* fun createListAlbum(): List<Album> {
         val listAlbum = mutableListOf<Album>()
         listAlbum.add(
             Album(
@@ -124,5 +132,5 @@ class AlbumRepository {
         return listAlbum
     }
 
-
+    */
 }

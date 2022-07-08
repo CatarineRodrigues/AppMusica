@@ -37,15 +37,15 @@ class AlbumDetailsFragment : Fragment() {
     }
 
     private fun exibirInformacoes(album: Album) {
-        binding.imgAlbum.setImageResource(album.getImagem())
-        binding.tvNomeAlbum.text = album.getNomeAlbum()
-        binding.tvDetalheAlbum.text = album.getDescricaoAlbum()
-        binding.tvCantora.text = TEXT_ARTISTA + album.getArtista()
-        binding.tvLancamento.text = TEXT_LANCAMENTO + album.getLancamento().toString()
-        binding.tvGravadora.text = TEXT_GRAVADORA + album.getGravadora()
-        binding.tvEstudio.text = TEXT_ESTUDIO + album.getEstudio()
-        binding.tvFormato.text = TEXT_FORMATO + album.getFormato()
-        binding.tvGenero.text = TEXT_GENERO + album.getGenero()
+        binding.imgAlbum.setImageResource(album.imagem)
+        binding.tvNomeAlbum.text = album.nomeAlbum
+        binding.tvDetalheAlbum.text = album.descricaoAlbum
+        binding.tvCantora.text = TEXT_ARTISTA + album.artista
+        binding.tvLancamento.text = TEXT_LANCAMENTO + album.lancamento.toString()
+        binding.tvGravadora.text = TEXT_GRAVADORA + album.gravadora
+        binding.tvEstudio.text = TEXT_ESTUDIO + album.estudio
+        binding.tvFormato.text = TEXT_FORMATO + album.formato
+        binding.tvGenero.text = TEXT_GENERO + album.genero
     }
 
     private fun exibirMensagemFavoritar(){

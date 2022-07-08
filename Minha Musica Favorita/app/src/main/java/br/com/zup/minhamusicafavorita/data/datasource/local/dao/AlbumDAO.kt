@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import br.com.zup.minhamusicafavorita.*
 import br.com.zup.minhamusicafavorita.domain.model.Album
 
 @Dao
@@ -15,5 +16,5 @@ interface AlbumDAO {
     fun getAlbumTitle(albumTitle: String): Album
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insetAlbum(album: Album)
+    fun insertAlbum(album: Album)
 }

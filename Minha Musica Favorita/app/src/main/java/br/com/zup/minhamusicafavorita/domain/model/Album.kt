@@ -14,43 +14,33 @@ data class Album(
     var codAlbum: Long = 1,
 
     @ColumnInfo(name = "imagem")
-    private var imagem: Int,
+    var imagem: Int,
 
     @ColumnInfo(name = "album")
-    private var nomeAlbum: String,
+    var nomeAlbum: String,
 
     @ColumnInfo(name = "descricao")
-    private var descricaoAlbum: String,
+    var descricaoAlbum: String,
 
     @ColumnInfo(name = "artista")
-    private var artista: String,
+    var artista: String,
 
     @ColumnInfo(name = "lancamento")
-    private var lancamento: Int,
+    var lancamento: Int,
 
     @ColumnInfo(name = "gravadora")
-    private var gravadora: String,
+    var gravadora: String,
 
     @ColumnInfo(name = "estudio")
-    private var estudio: String,
+    var estudio: String,
 
     @ColumnInfo(name = "formato")
-    private var formato: String,
+    var formato: String,
 
     @ColumnInfo(name = "genero")
-    private var genero: String,
+    var genero: String,
 
     @ColumnInfo(name = "favoritado")
     var isFavorite: Boolean = false
 
-) : Parcelable {
-    fun getImagem() = this.imagem
-    fun getNomeAlbum() = this.nomeAlbum
-    fun getDescricaoAlbum() = this.descricaoAlbum
-    fun getArtista() = this.artista
-    fun getLancamento() = this.lancamento
-    fun getGravadora() = this.gravadora
-    fun getEstudio() = this.estudio
-    fun getFormato() = this.formato
-    fun getGenero() = this.genero
-}
+) : Parcelable
