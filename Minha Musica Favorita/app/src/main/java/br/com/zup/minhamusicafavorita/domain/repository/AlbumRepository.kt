@@ -3,12 +3,12 @@ import br.com.zup.minhamusicafavorita.domain.model.Album
 
 class AlbumRepository(private val albumDao: AlbumDAO) {
 
-    suspend fun getAllAlbums(): List<Album> = albumDao.getAllAlbums()
-
-    suspend fun insertAlbum(album: Album) {
+    suspend fun insertAlbumsDB(listAlbum: List<Album>) {
 //        val listAlbums = createListAlbum()
-        albumDao.insertAlbum(album)
+        albumDao.insertAlbumsDB(listAlbum)
     }
+
+    suspend fun getAllAlbums(): List<Album> = albumDao.getAllAlbums()
 
    /* fun createListAlbum(): List<Album> {
         val listAlbum = mutableListOf<Album>()

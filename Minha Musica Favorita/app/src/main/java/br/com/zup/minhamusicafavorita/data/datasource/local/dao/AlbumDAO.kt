@@ -16,5 +16,5 @@ interface AlbumDAO {
     fun getAlbumTitle(albumTitle: String): Album
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insertAlbum(album: Album)
+    fun insertAlbumsDB(listAbums : List<Album>)
 }

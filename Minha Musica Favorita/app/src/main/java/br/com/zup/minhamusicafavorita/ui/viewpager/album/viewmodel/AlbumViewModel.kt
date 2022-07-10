@@ -13,6 +13,15 @@ class AlbumViewModel(application: Application) : AndroidViewModel(application) {
     private val albumUseCase = AlbumUseCase(application)
     val albumListState = MutableLiveData<ViewState<List<Album>>>()
 
+    fun albumAdd(listAlbum: List<Album>){
+        viewModelScope.launch {
+            try {
+                albumUseCase.insertAlbumsDB(listAlbum)
+            } catch (ex: Exception){
+                Log.i("Error", "Erro-----> ${ex.message}")
+            }
+        }
+    }
 
     fun getAlbumList() {
         viewModelScope.launch {
@@ -24,16 +33,6 @@ class AlbumViewModel(application: Application) : AndroidViewModel(application) {
             } catch (ex: Exception) {
                 albumListState.value =
                     ViewState.Error(Throwable("Tivemos um problema! Tente mais tarde."))
-            }
-        }
-    }
-
-    fun albumAdd(album: Album){
-        viewModelScope.launch {
-            try {
-                albumUseCase.insertAlbum(album)
-            } catch (ex: Exception){
-                Log.i("Error", "Erro-----> ${ex.message}")
             }
         }
     }

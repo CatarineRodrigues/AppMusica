@@ -5,6 +5,11 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/viewPagerFragment">
     <fragment
+        android:id="@+id/albumDetailsFragment"
+        android:name="br.com.zup.minhamusicafavorita.ui.albumDetails.view.AlbumDetailsFragment"
+        android:label="fragment_album_details"
+        tools:layout="@layout/fragment_album_details" />
+    <fragment
         android:id="@+id/viewPagerFragment"
         android:name="br.com.zup.minhamusicafavorita.ui.viewpager.view.ViewPagerFragment"
         android:label="fragment_view_pager"
@@ -13,9 +18,4 @@
             android:id="@+id/action_viewPagerFragment_to_albumDetailsFragment"
             app:destination="@id/albumDetailsFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/albumDetailsFragment"
-        android:name="br.com.zup.minhamusicafavorita.ui.albumDetails.view.AlbumDetailsFragment"
-        android:label="fragment_album_details"
-        tools:layout="@layout/fragment_album_details" />
 </navigation>
