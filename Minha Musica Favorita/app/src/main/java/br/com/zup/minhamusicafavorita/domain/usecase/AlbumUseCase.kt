@@ -12,7 +12,7 @@ class AlbumUseCase(application: Application) {
             albumRepository.insertAlbumsDB(listAlbum)
             ViewState.Success(listAlbum)
         } catch (ex: Exception) {
-            ViewState.Error(Exception("Não foi possível inserir o filme!"))
+            ViewState.Error(Exception("Não foi possível inserir o album!"))
         }
     }
 
@@ -21,7 +21,7 @@ class AlbumUseCase(application: Application) {
             val listAlbum = albumRepository.getAllAlbums()
             ViewState.Success(listAlbum)
         } catch (ex: Exception) {
-            ViewState.Error(Exception("Não foi possível carregar a lista de filmes!"))
+            ViewState.Error(Exception("Não foi possível carregar a lista de albuns!"))
         }
     }
 }

@@ -44,20 +44,20 @@ class AlbumFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        exibirRecyclerView()
         viewModel.getAlbumList()
+        exibirRecyclerView()
         initObserver()
     }
 
     fun initObserver() {
 //        viewModel.albumListState.observe(this.viewLifecycleOwner) {
-////            when (it) {
-////                is ViewState.Success -> {
+//            when (it) {
+//                is ViewState.Success -> {
 //                    albumAdapter.atualizarListaAlbum(it.data as MutableList<Album>)
         val lista = listaNovaAlbum
         albumAdapter.atualizarListaAlbum(lista)
 //                }
-////                is ViewState.Error -> {
+//                is ViewState.Error -> {
 //                    Toast.makeText(context, "Não foi possível carregar a lista", Toast.LENGTH_LONG)
 //                        .show()
 //                }
